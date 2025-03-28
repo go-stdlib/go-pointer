@@ -31,7 +31,7 @@ func Real(value any) any {
 	// Non pointer; return given value.
 	case rt.Kind() != reflect.Ptr:
 		return value
-		// Pointer; deref until we're at the bottom.
+	// Pointer; deref until we're at the bottom.
 	default:
 		rv := reflect.ValueOf(value)
 		for rv.Kind() == reflect.Ptr && !rv.IsNil() {

@@ -6,6 +6,9 @@
 build: ## Build package.
 	@go build .
 
+fmt: ## Format code.
+	@go fmt ./...
+
 .PHONY: test
 test: ## Run tests.
 	@go clean -testcache && go test -race ./...
